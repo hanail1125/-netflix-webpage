@@ -1,0 +1,10 @@
+body {
+  background-color: #000 !important;
+  color: white !important;
+}
+
+a {
+  /* color: white !important; */
+  /* margin: 5px 10px; */
+  text-decoration: none !important;
+}
