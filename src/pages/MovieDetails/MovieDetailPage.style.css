@@ -21,6 +21,7 @@
     z-index: -1;
 
     & .movieDetailInfo {
+      width: 100%;
       & h1 {
         font-weight: bold;
         margin: 20px 0 10px;
@@ -127,6 +128,7 @@
   & .modal-header {
     border: 0;
     padding: 8px;
+
     & .btn-close {
       opacity: 1;
     }
@@ -140,8 +142,15 @@
 }
 
 .overViewBox {
-  max-height: 300px;
-  overflow-y: auto;
-  border: 1px solid #ccc;
-  padding: 10px;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  padding: 25px 0 26px;
+  width: 100%;
+  & .overView {
+    height: 170px;
+    overflow-y: hidden;
+    -webkit-line-clamp: 7;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+  }
 }

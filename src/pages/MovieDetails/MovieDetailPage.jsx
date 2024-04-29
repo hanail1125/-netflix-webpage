@@ -74,14 +74,10 @@ const MovieDetailPage = () => {
                   {data?.adult ? 'Over18' : 'ALL'}
                 </Badge>
               </div>
-              <div style={{
-                borderTop: '1px solid #fff',
-                borderBottom: '1px solid #fff',
-                padding: '25px 0'
-              }}
-              className='overViewBox'
-              >
-                {data?.overview ? data?.overview : '영화 요약 정보 없음.'}
+              <div className='overViewBox'>
+                <div className='overView'>
+                  {data?.overview ? data?.overview : '영화 요약 정보 없음.'}
+                </div>
               </div>
               <div className='info2'>
                 <div className='release_date'>
