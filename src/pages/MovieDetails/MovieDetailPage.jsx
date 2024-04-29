@@ -78,7 +78,9 @@ const MovieDetailPage = () => {
                 borderTop: '1px solid #fff',
                 borderBottom: '1px solid #fff',
                 padding: '25px 0'
-              }}>
+              }}
+              className='overViewBox'
+              >
                 {data?.overview ? data?.overview : '영화 요약 정보 없음.'}
               </div>
               <div className='info2'>
