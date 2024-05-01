@@ -8,8 +8,6 @@ const RecommendAtions = () => {
   const {movieId} = location.state;
   const {data, isLoading, isError, error} = useRecommendAtionsQuery(movieId);
 
-  // console.log('RAData ===>', data?.results);
-
   const navigate = useNavigate();
 
   return (

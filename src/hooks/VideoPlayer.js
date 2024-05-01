@@ -8,8 +8,6 @@ export const VideoPlayer = () => {
   const {movieId} = location.state;
   const {data, isLoading, isError, error} = useVideoIdQuery(movieId);
 
-  //console.log('VideoIdData ===>', data?.results[0].key);
-
   const opts = {
     width: '1080',
     height: '720',

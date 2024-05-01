@@ -19,7 +19,6 @@ const MoviePage = ({genreSelect}) => {
   const {data, isLoading, isError, error} = useSearchMovieQuery({keyword, page});
   const {data: genreData} = useMoviesGenreQuery();
 
-
   const [selectedGenre, setSelectedGenre] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
   const [genres, setGenres] = useState([]);

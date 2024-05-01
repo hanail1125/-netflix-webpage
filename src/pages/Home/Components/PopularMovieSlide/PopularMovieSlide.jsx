@@ -7,7 +7,6 @@ import {useMoviesQuery} from '../../../../hooks/useMoviesQuery';
 
 const PopularMovieSlide = ({movieType}) => {
   const {data, isLoading, isError, error} = useMoviesQuery(movieType);
-  // console.log('PopularMovieData ===>', data);
 
   if (isLoading) {
     return (

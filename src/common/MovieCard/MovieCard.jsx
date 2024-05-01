@@ -6,7 +6,6 @@ import {useNavigate} from 'react-router-dom';
 
 const MovieCard = ({movie, addClass, movieType}) => {
   const {data: genreData} = useMoviesGenreQuery();
-  // console.log('movieType ===>?????', movieType);
 
   const navigate = useNavigate();
 

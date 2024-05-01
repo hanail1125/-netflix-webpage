@@ -7,7 +7,6 @@ import { useMoviesQuery } from '../../../../hooks/useMoviesQuery';
 
 const RatedMovieSlide = ({ movieType }) => {
   const { data, isLoading, isError, error } = useMoviesQuery(movieType);
-  // console.log('ratedMovieData ===>', data);
 
   if (isLoading) {
     return (

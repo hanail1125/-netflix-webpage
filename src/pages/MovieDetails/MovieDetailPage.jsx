@@ -44,19 +44,15 @@ const MovieDetailPage = () => {
     <>
       <Container className='MovieDetailArea'>
         <Row>
-          <Col lg={5} xs={12}>
+          <Col lg={6} xs={12} className='col6-left'>
             <div
-              style={{
-                backgroundImage: `url(https://media.themoviedb.org/t/p/w600_and_h900_bestv2${data?.poster_path})`,
-                width: '100%',
-                height: '100%',
-                backgroundSize: '100% 100%',
-                backgroundRepeat: 'no-repeat'
-              }}
               className='movie-poster'
+              style={{
+                backgroundImage: `url(https://media.themoviedb.org/t/p/w600_and_h900_bestv2${data?.poster_path})`
+              }}
             />
           </Col>
-          <Col lg={7} xs={12}>
+          <Col lg={6} xs={12} className='col6-right'>
             <div className='movieDetailInfo'>
               {data?.genres?.map((genre, idx) => (
                 <Badge bg="danger" key={idx} className='me-2'>{genre.name}</Badge>
@@ -65,7 +61,7 @@ const MovieDetailPage = () => {
               <h4>
                 {data?.title !== data?.original_title ? data?.original_title : ''}
               </h4>
-              <div style={{display: 'flex', flexDirection: 'row', marginBottom: 30}}>
+              <div className='popularity'>
                 <Badge text='dark' bg="warning" className='me-2 vote_average'>추천률</Badge>
                 <div style={{marginRight: 15}}>{data?.vote_average}</div>
                 <Badge text='dark' bg="warning" className='me-2 vote_average'>인기순</Badge>

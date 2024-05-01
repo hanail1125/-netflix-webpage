@@ -18,9 +18,6 @@ const MovieReviews = () => {
     });
   };
 
-  // console.log('ReviewsMovieId ===>', movieId);
-  // console.log('ReviewsData ===>', data);
-
   return (
     <div style={{flex: 1}} className='reviewsArea'>
       <div>

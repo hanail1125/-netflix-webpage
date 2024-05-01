@@ -5,7 +5,6 @@ import Carousel from 'react-multi-carousel';
 import MovieCard from '../MovieCard/MovieCard';
 
 const MovieSlider = ({ title, movies, responsive, movieType }) => {
-  // console.log('movieType ---->', movieType);
   return (
     <div>
       <h3>{title}</h3>
