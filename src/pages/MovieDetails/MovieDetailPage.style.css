@@ -155,6 +155,23 @@
         display: flex;
         flex-direction: row;
         margin-bottom: 23px;
+
+        & div {
+          display: flex;
+          flex-direction: row;
+          margin-bottom: 5px;
+
+          @media(max-width: 359px) {
+            & span {
+              width: 80px;
+              height: 26px;
+            }
+          }
+        }
+
+        @media(max-width: 359px) {
+          flex-direction: column;
+        }
       }
 
       & .me-2 {
@@ -263,6 +280,7 @@
       margin: 0;
       width: 50%;
       margin-left: -0.5px;
+
       &:first-child {
         border-right: 0.5px solid #666;
       }
@@ -375,15 +393,19 @@
     @media(max-width: 480px) {
       height: 300px;
     }
+
     @media(max-width: 428px) {
       height: 260px;
     }
+
     @media(max-width: 414px) {
       height: 260px;
     }
+
     @media(max-width: 390px) {
       height: 240px;
     }
+
     @media(max-width: 360px) {
       height: 210px;
     }

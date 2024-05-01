@@ -62,13 +62,19 @@ const MovieDetailPage = () => {
                 {data?.title !== data?.original_title ? data?.original_title : ''}
               </h4>
               <div className='popularity'>
-                <Badge text='dark' bg="warning" className='me-2 vote_average'>추천률</Badge>
-                <div style={{marginRight: 15}}>{data?.vote_average}</div>
-                <Badge text='dark' bg="warning" className='me-2 vote_average'>인기순</Badge>
-                <div style={{marginRight: 15}}>{data?.popularity}</div >
-                <Badge text='dark' bg="warning" style={{color: data?.adult ? '#dc3545' : 'yellow'}}>
-                  {data?.adult ? 'Over18' : 'ALL'}
-                </Badge>
+                <div>
+                  <Badge text='dark' bg="warning" className='me-2 vote_average'>추천률</Badge>
+                  <div style={{marginRight: 15}}>{data?.vote_average}</div>
+                </div>
+                <div>
+                  <Badge text='dark' bg="warning" className='me-2 vote_average'>인기순</Badge>
+                  <div style={{marginRight: 15}}>{data?.popularity}</div >
+                </div>
+                <div>
+                  <Badge text='dark' bg="warning" style={{color: data?.adult ? '#dc3545' : 'yellow'}}>
+                    {data?.adult ? 'Over18' : 'ALL'}
+                  </Badge>
+                </div>
               </div>
               <div className='overViewBox'>
                 <div className='overView'>
