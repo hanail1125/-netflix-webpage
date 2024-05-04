@@ -48,7 +48,7 @@ function Banner({movieType}) {
           <h1>{data?.results[indexNum].title}</h1>
           <h3>{data?.results[indexNum].original_title}</h3>
         </div>
-        <p>{data?.results[indexNum].overview}</p>
+        <p className='banner-overview'>{data?.results[indexNum].overview}</p>
         <Button onClick={onClickDetailPage} className='btn btn-outline-light btn-lg'>자세히 보기</Button>
       </div>
     </div>

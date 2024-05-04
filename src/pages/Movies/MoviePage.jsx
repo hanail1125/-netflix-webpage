@@ -8,24 +8,42 @@ import './MoviePage.style.css';
 import {useMoviesGenreQuery} from "../../hooks/useMoviesGenre";
 import {useSelectGenreData} from "../../hooks/useSelectGenre";
 
-const MoviePage = ({genreSelect}) => {
+const MoviePage = () => {
   const [query] = useSearchParams();
   const keyword = query.get('q');
-  const [keywords, setKeywords] = useState(keyword);
+  const [keywords] = useState(keyword);
   const [page, setPage] = useState('');
-
-  console.log("keywords ===>", keywords);
 
   const {data, isLoading, isError, error} = useSearchMovieQuery({keyword, page});
   const {data: genreData} = useMoviesGenreQuery();
 
   const [selectedGenre, setSelectedGenre] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
-  const [genres, setGenres] = useState([]);
-  const [moviesPerPage, setMoviesPerPage] = useState(20);
+  const [genres] = useState([]);
+  const [moviesPerPage] = useState(20);
 
   const [ascending, setAscending] = useState(true);
   const {movies} = useSelectGenreData(`https://api.themoviedb.org/3/discover/movie?api_key=0b9838fb247d1fe11964d3ddd684974e&with_genres=${selectedGenre}&page=${currentPage}&language=ko-KR`, selectedGenre, currentPage, genres, moviesPerPage);
+
+  const [windowDimensions, setWindowDimensions] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowDimensions({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const handleSort = (event) => {
      event.preventDefault();
@@ -36,7 +54,6 @@ const MoviePage = ({genreSelect}) => {
 
   useEffect(() => {
     setPage(1);
-    // setGenres(genreData);
   }, [ascending, keywords]);
 
   const navigate = useNavigate();
@@ -123,7 +140,7 @@ const MoviePage = ({genreSelect}) => {
             </div>
           </div>
         </Col>
-        <Col lg={8} xs={12}>
+        <Col lg={8} xs={12} className="MoviesList">
           <Row>
             {keyword && (
               <>
@@ -154,7 +171,7 @@ const MoviePage = ({genreSelect}) => {
               nextLabel="▶"
               onPageChange={handlePageChange}
               currentPage={currentPage - 1}
-              pageRangeDisplayed={10}
+              pageRangeDisplayed={windowDimensions.width < 700 ? 1 : 10}
               marginPagesDisplayed={1}
               previousLabel="◀"
               pageClassName="page-item"

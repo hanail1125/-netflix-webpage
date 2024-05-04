@@ -74,3 +74,31 @@
     }
   }
 }
+
+@media(max-width: 414px) {
+  .banner-overview {
+    height: 270px;
+    overflow-y: hidden;
+    -webkit-line-clamp: 11;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+  }
+}
+@media(max-width: 360px) {
+  .banner-overview {
+    height: 245px;
+    overflow-y: hidden;
+    -webkit-line-clamp: 10;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+  }
+}
+@media(max-width: 320px) {
+  .banner-overview {
+    height: 220px;
+    overflow-y: hidden;
+    -webkit-line-clamp: 9;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+  }
+}

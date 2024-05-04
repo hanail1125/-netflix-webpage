@@ -36,6 +36,11 @@
     width: 280px;
   }
 
+  @media(max-width:991px) {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
   & .accordion-item {
     border: 0px solid #fff
   }
@@ -179,7 +184,13 @@
   }
 }
 
-@media (max-width: 460px) {
+@media (max-width: 750px) {
+  .MoviesList {
+    padding: 0;
+  }
+}
+
+@media (max-width: 428px) {
   .col-lg-6 {
     flex: 0 0 auto;
     width: 100%;

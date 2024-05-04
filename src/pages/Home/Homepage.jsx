@@ -3,7 +3,6 @@ import Banner from './Components/Banner/Banner';
 import PopularMovieSlide from './Components/PopularMovieSlide/PopularMovieSlide';
 import RatedMovieSlide from './Components/RatedMovieSlide/RatedMovieSlide';
 import UpcomingMovieSlide from './Components/UpcomingMovieSlide/UpcomingMovieSlide';
-import Test from '../../Test';
 
 const HomePage = () => {
   return (
