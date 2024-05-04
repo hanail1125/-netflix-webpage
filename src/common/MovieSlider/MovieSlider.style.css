@@ -17,11 +17,18 @@
   height: 80px;
   border-radius: 80px !important;
   box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.2);
+  @media(max-width: 480px){
+    width: 70px;
+    height: 70px;
+  };
+  @media(max-width: 360px){
+    width: 55px;
+    height: 55px;
+  };
 
   &::before {
-    font-size: 35px !important;
+    font-size: 30px !important;
     color:  #333 !important;
-    font-weight: bold;
   }
 
   &:hover::before {
@@ -81,25 +88,19 @@
   }
 }
 
-@media (max-width: 520px) {
-  .carousel-container {
-    height: 475px;
-  }
-}
-
-@media (max-width: 474px) {
+@media (max-width: 480px) {
   .carousel-container {
     height: 435px;
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 428px) {
   .carousel-container {
     height: 390px;
   }
 }
 
-@media (max-width: 364px) {
+@media (max-width: 360px) {
   .carousel-container {
     height: 350px;
   }
